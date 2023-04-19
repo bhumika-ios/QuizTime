@@ -8,15 +8,36 @@
 import SwiftUI
 
 struct LaunchScreen: View {
+    @State var isLoading = true
     var body: some View {
-        ZStack{
-            Color.white
-                .opacity(0.9)
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                Constants.logoImage
-                    .resizable()
-                    .frame(width: Constants.logoImageSize, height: Constants.logoImageSize, alignment: .center)
+        if isLoading {
+            ZStack{
+                Color.white
+                    .opacity(0.9)
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
+                    Constants.logoImage
+                        .resizable()
+                        .frame(width: Constants.logoImageSize, height: Constants.logoImageSize, alignment: .center)
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        withAnimation {
+                        self.isLoading = false
+                        }
+                    }
+                }
+            }
+        } else {
+            TabView {
+                Views.InitialView(viewModel: .init())
+                    .tabItem {
+                        Label("Quiz", systemImage: "list.dash")
+                    }
+                Views.ProfileView(viewModel: .init())
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle.fill")
+                    }
             }
         }
     }
