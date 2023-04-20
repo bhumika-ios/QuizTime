@@ -14,7 +14,8 @@ extension Views {
 
         var body: some View {
             ZStack{
-              
+                Color("bg1").opacity(0.1)
+                    .edgesIgnoringSafeArea(.all)
                 VStack {
                     ZStack {
                         Circle()
@@ -39,7 +40,7 @@ extension Views {
                     .offset(y: 48)
                     .background{
                         RoundedRectangle(cornerRadius: 8)
-                            .fill(.orange)
+                            .fill(.white)
                             .frame(width: 350, height: 180)
                     }
                     .padding(10)
