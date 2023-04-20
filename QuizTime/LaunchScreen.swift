@@ -29,16 +29,8 @@ struct LaunchScreen: View {
                 }
             }
         } else {
-            TabView {
                 Views.InitialView(viewModel: .init())
-                    .tabItem {
-                        Label("Quiz", systemImage: "list.dash")
-                    }
-                Views.ProfileView(viewModel: .init())
-                    .tabItem {
-                        Label("Profile", systemImage: "person.circle.fill")
-                    }
-            }
+            
         }
     }
     
