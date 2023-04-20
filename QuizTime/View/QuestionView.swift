@@ -20,7 +20,7 @@ extension Views {
         }
         var body: some View {
             ZStack {
-                Color.white
+                Color("bg1").opacity(0.1)
                .edgesIgnoringSafeArea(.all)
                 if viewModel.answers.count == 0 {
                     renderBody(answerType: .multiple, isAnimating: $isAnimating)
