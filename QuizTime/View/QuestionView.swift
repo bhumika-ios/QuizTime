@@ -20,7 +20,8 @@ extension Views {
         }
         var body: some View {
             ZStack {
-                DesignSystem.Color.byCategory(category: viewModel.category).uiColor.edgesIgnoringSafeArea(.all)
+                Color.white
+               .edgesIgnoringSafeArea(.all)
                 if viewModel.answers.count == 0 {
                     renderBody(answerType: .multiple, isAnimating: $isAnimating)
                         .padding(.horizontal, DesignSystem.Padding.macroPadding)
@@ -82,7 +83,18 @@ extension Views {
                 }
                 if currentQuestion < Manager.API.shared.questions.count - 1 && self.isAnimating {
                     SwiftUI.Button(action: { currentQuestion += 1 }) {
-                        Text("Next Question")
+                        VStack{
+                            Text("Next Question")
+                                .foregroundColor(.white)
+                        }
+                        
+                        .background{
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(.blue)
+                                .frame(width: 165, height: 45)
+                            
+                        }
+                        .padding()
                     }
                 } else if currentQuestion >= Manager.API.shared.questions.count - 1 && self.isAnimating {
                     NavigationLink(destination: ConclusionView(viewModel: .init()).navigationBarHidden(true)
@@ -90,11 +102,20 @@ extension Views {
                             Manager.SFX.playSound(sound: .finished)
                         }
                     ) {
-                        Text("Finish quiz")
+                        VStack{
+                            Text("Finish quiz")
+                                .foregroundColor(.white)
+                        }
+                        .background{
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(.red)
+                                .frame(width: 165, height: 45)
+                        }
+                        .padding()
                     }
                 }
-            }.foregroundColor(DesignSystem.Color.textColorByCategory(category: viewModel.category).uiColor)
-                .padding(DesignSystem.Padding.microPadding)
+            }.foregroundColor(.black)
+                .padding(DesignSystem.Padding.macroPadding)
         }
     }
 }
