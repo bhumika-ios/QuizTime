@@ -44,11 +44,11 @@ extension Views {
                 .padding()
             } .background(
                 RoundedRectangle(cornerRadius: Constants.rectangleCornerRadius, style: .circular)
-                    .fill(Color.white .opacity(Constants.opacity))
+                    .fill(Color.white)
             )
-                .overlay(RoundedRectangle(cornerRadius: Constants.rectangleCornerRadius)
-                    .stroke(Color.black, lineWidth: Constants.strokeLineWidth)
-            )
+//                .overlay(RoundedRectangle(cornerRadius: Constants.rectangleCornerRadius)
+//                    .stroke(Color.black, lineWidth: Constants.strokeLineWidth)
+//            )
                 .padding(.bottom, DesignSystem.Padding.padding)
                 .disabled(isAnimating)
         }
