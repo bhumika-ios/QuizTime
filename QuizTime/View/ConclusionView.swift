@@ -33,6 +33,8 @@ extension Views {
                                    height: Views.ConclusionView.CircleConstant.frameSize)
                             .rotationEffect(Angle(degrees: Views.ConclusionView.CircleConstant.defaultAngle))
                         Text("\(viewModel.answerRate())%")
+                            .font(.system(size: 32))
+                            .fontWeight(.semibold)
                     }
                     .offset(y: 48)
                     .background{
