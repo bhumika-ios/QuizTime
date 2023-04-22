@@ -79,7 +79,7 @@ extension Views {
                                        
                         ){
                             
-                            Text("Play Game")
+                            Text("Start")
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                               
