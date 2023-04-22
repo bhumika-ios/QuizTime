@@ -71,7 +71,7 @@ extension Views {
                         }
                         VStack{
                             NavigationLink(destination: InitialView(viewModel: .init()).navigationBarHidden(true)) {
-                                Text("Play Again")
+                                Text("Start Again")
                                     .foregroundColor(.white)
                             }
                         }
