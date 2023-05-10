@@ -19,8 +19,8 @@ extension Views {
                 VStack {
                     ZStack {
                         Circle()
-//                            .trim(from: Views.ConclusionView.CircleConstant.trimBegin,
-//                                  to: Views.ConclusionView.CircleConstant.trimTarget)
+                            .trim(from: Views.ConclusionView.CircleConstant.trimBegin,
+                                  to: Views.ConclusionView.CircleConstant.trimTarget)
                             .stroke(Color.red,
                                     style: StrokeStyle(lineWidth: Views.ConclusionView.CircleConstant.defaultLineWidth))
                             .frame(width: Views.ConclusionView.CircleConstant.frameSize,

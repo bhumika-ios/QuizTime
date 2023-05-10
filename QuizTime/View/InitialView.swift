@@ -19,12 +19,12 @@ extension Views {
             NavigationView {
                 ZStack{
                     List {
-                        Section("Number of questions") {
-                            Stepper {
-                                Text("\(viewModel.numberQuestions)")
-                            } onIncrement: { viewModel.numberQuestions += 1
-                            } onDecrement: { viewModel.numberQuestions -= 1 }
-                        }
+//                        Section("Number of questions") {
+//                            Stepper {
+//                                Text("\(viewModel.numberQuestions)")
+//                            } onIncrement: { viewModel.numberQuestions += 1
+//                            } onDecrement: { viewModel.numberQuestions -= 1 }
+//                        }
                         
                         Section {
                             Picker(
@@ -103,7 +103,7 @@ extension Views {
 
 extension Views.InitialView {
     class ViewModel: ObservableObject {
-        @Published var numberQuestions: Int = 5 {
+        @Published var numberQuestions: Int = 10 {
             didSet {
                 if numberQuestions == 0 {
                     numberQuestions = 1
