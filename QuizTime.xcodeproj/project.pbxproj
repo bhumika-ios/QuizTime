@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0D81342A0B861700E6E67F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D81332A0B861700E6E67F /* CategoryView.swift */; };
 		AC3399F229EEB76D00847927 /* QuizTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3399F129EEB76D00847927 /* QuizTimeApp.swift */; };
 		AC3399F429EEB76D00847927 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3399F329EEB76D00847927 /* ContentView.swift */; };
 		AC3399F629EEB76F00847927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3399F529EEB76F00847927 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0D81332A0B861700E6E67F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		AC3399EE29EEB76D00847927 /* QuizTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3399F129EEB76D00847927 /* QuizTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTimeApp.swift; sourceTree = "<group>"; };
 		AC3399F329EEB76D00847927 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				AC339A0B29EEBC1A00847927 /* ConclusionView.swift */,
 				AC339A0D29EEBC4800847927 /* QuestionView.swift */,
 				ACD086B029F6932400DD56C3 /* ShowTypeView.swift */,
+				AC0D81332A0B861700E6E67F /* CategoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				AC339A1329EEBC9D00847927 /* BooleanButton.swift in Sources */,
 				AC339A2A29EEBE4600847927 /* DesignSystem.Padding.swift in Sources */,
 				AC339A0829EEBBCC00847927 /* InitialView.swift in Sources */,
+				AC0D81342A0B861700E6E67F /* CategoryView.swift in Sources */,
 				AC339A1129EEBC8000847927 /* MultipleChoiceButton.swift in Sources */,
 				AC339A1829EEBCF200847927 /* Manager.API.swift in Sources */,
 				AC339A2829EEBE1E00847927 /* DesignSystem.Color.swift in Sources */,
